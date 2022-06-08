@@ -95,7 +95,8 @@ class Realtor(metaclass=RealtorMeta):
         if self.discount is True:
             self.house.discount()
 
-    def steal_money(self, human):
+    @staticmethod
+    def steal_money(human):
         if random.randint(1, 10) == 10:
             human.money = 0
             print(f'Realtor is thief!!!)')
